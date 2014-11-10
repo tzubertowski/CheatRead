@@ -9,7 +9,7 @@ body {} .dropDivClass {
 }
 @font-face {
     font-family: cheatRead;
-    src: url('font/Rosarivo-Regular.otf');
+    src: url('fonts/UbuntuMono-R.ttf');
 }
 .dropDivClass.dragover {
     border-color: black;
@@ -59,10 +59,26 @@ body {} .dropDivClass {
     overflow: auto;
 }
 .playerClass {
-    height: 150px;
     overflow: auto;
-    border: 1px dashed #73705d;
-    line-height: 200px;
+    border-top: 2px solid #73705d;
+    border-bottom: 2px solid #73705d;
+    line-height: 100px;
     text-align: center;
     font-family: chatRead;
+    font-size: xx-large;
+}
+.middleSelector{
+	position: absolute;
+	height: 50px;
+	top:0px;
+	left:300px;
+	width:302px;
+	border-left: 2px dashed #73705d;
+}
+fieldset>legend{
+	    color: #f5276c;
+}
+.middleLetter{
+	color:#65d9eb;
+	font-size: 140%;
 }

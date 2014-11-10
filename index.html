@@ -3,7 +3,9 @@
     <head>
         <title>Pogrubiator spekator</title>
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
     </head>
@@ -13,9 +15,20 @@
             <div class="uploadErrors" id="uploadError">smeagle</div>
         </div>
         <div id='playerWrapper' class="hidden">
-            <div id='playerDiv' class='playerClass'>
+            <div id='playerDiv' class='playerClass hidden'>
+                <div id="textReader"></div>
+                <!--                 <div class="middleSelector"></div> -->
+            </div>
+            <div id="controlGroup">
+                <form class="pure-form">
+                    <fieldset>
+                        <legend>Settings</legend>
+                        <input type="number" id="wpm" placeholder="Words Per Minute">
+                    </fieldset>
+                </form>
+            <button id="startDisplayingButton" class="pure-button"><i class="fa fa-play"></i>Start</button>
             </div>
         </div>
-        <script type="text/javascript" src="js/filedrag.js"></script>
+        <script type="text/javascript" src="js/filedrag.js" charset="utf-8"></script>
     </body>
 </html>

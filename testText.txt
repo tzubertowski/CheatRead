@@ -1,0 +1,7 @@
+I'm getting a file via fs.readFile and the output shows these characters:
+
+á (and any letter with accent), ¿, etc.
+
+As question marks "?".
+
+I guess it's an encoding problem, since I'm using UTF8, how can I fix this?

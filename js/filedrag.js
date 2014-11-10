@@ -1,6 +1,9 @@
-$(document).ready(function(){
+$(document).ready(function() {
+    var fileContent;
+    var dDelay;
     var dropdiv = document.getElementById('dropDiv');
     var errorDiv = $('#uploadError');
+    var textDiv = $('#textReader');
     var file;
     dropdiv.ondragover = function() {
         errorDiv.switchClass('button-error pure-button', 'uploadErrors', 1000, "easeInOutQuad");
@@ -24,10 +27,32 @@ $(document).ready(function(){
         }
         return false;
     };
-    function displayPlayer(f) {
+    function displayWithDelay(elementToDisplay, dDelay) {
+            setTimeout(function() {
+                textDiv.html(elementToDisplay);
+            }, dDelay);
+    };
+    function displayPlayer() {
         $('#uploadWrapper').addClass('hidden', 200, 'easeInExpo');
         $('body').addClass('monokaiBody', 500, "easeInExpo");
         $('#playerWrapper').removeClass('hidden', 600, "easeInExpo");
+    };
+
+    $('#startDisplayingButton').click( function(){
+        var startDisplayLoop = displayTextField(fileContent);
+    });
+    function displayTextField(f){
+        $('#playerDiv').removeClass('hidden', 600, "easeInExpo");
+        dDelay = $('#wpm').val() * 100;
+        var textSplit = f.split(/[ ,]+/);
+        jQuery.each(textSplit, function(i) {
+            var el = this;
+            var whichLetter = Math.floor(el.length / 2);
+            var elementToDisplay = '';
+            elementToDisplay = this.substring(0, whichLetter) + "<span class='middleLetter'>" + this.substring(whichLetter, whichLetter + 1) + '</span>' + this.substring(whichLetter + 1);
+
+            var displayText = displayWithDelay(elementToDisplay, i*dDelay)
+        });
         return false;
     };
     /* funkcja czytająca txt */
@@ -35,14 +60,12 @@ $(document).ready(function(){
         if (f) {
             var reader = new FileReader();
             reader.onload = function(e) {
-                var contents = e.target.result;
-                var playerOn = displayPlayer(contents);
+                fileContent = e.target.result;
+                var playerOn = displayPlayer();
             }
             reader.readAsText(f);
         } else {
             alert("Nie można załadować pliku. Upwnij się, że jego format jest poprawny.");
         }
     };
-
-
 });
