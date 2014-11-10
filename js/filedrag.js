@@ -27,31 +27,42 @@ $(document).ready(function() {
         }
         return false;
     };
+
     function displayWithDelay(elementToDisplay, dDelay) {
-            setTimeout(function() {
-                textDiv.html(elementToDisplay);
-            }, dDelay);
+        setTimeout(function() {
+            if (elementToDisplay.indexOf('†') >= 0) {
+                menuDisplay = displayUploadMenu();
+            }
+            textDiv.html(elementToDisplay);
+        }, dDelay);
     };
+
+    function displayUploadMenu() {
+        $('#playerWrapper').addClass('hidden', 600, "easeInExpo");
+        $('body').removeClass('monokaiBody', 500, 'easeInExpo');
+        $('#uploadWrapper').removeClass('hidden');
+    }
+
     function displayPlayer() {
         $('#uploadWrapper').addClass('hidden', 200, 'easeInExpo');
         $('body').addClass('monokaiBody', 500, "easeInExpo");
         $('#playerWrapper').removeClass('hidden', 600, "easeInExpo");
     };
-
-    $('#startDisplayingButton').click( function(){
+    $('#startDisplayingButton').click(function() {
         var startDisplayLoop = displayTextField(fileContent);
     });
-    function displayTextField(f){
+
+    function displayTextField(f) {
         $('#playerDiv').removeClass('hidden', 600, "easeInExpo");
         dDelay = $('#wpm').val() * 100;
         var textSplit = f.split(/[ ,]+/);
+        textSplit.push('†');
         jQuery.each(textSplit, function(i) {
             var el = this;
             var whichLetter = Math.floor(el.length / 2);
             var elementToDisplay = '';
             elementToDisplay = this.substring(0, whichLetter) + "<span class='middleLetter'>" + this.substring(whichLetter, whichLetter + 1) + '</span>' + this.substring(whichLetter + 1);
-
-            var displayText = displayWithDelay(elementToDisplay, i*dDelay)
+            var displayText = displayWithDelay(elementToDisplay, i * dDelay);
         });
         return false;
     };

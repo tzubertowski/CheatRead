@@ -32,6 +32,10 @@ body {} .dropDivClass {
     background: #252621;
     color: #f5276c;
 }
+.normaBody {
+    background: white;
+    color: black;
+}
 #uploadWrapper {
     position: absolute;
     margin: auto;
