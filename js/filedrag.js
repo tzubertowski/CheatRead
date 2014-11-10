@@ -24,18 +24,25 @@ $(document).ready(function(){
         }
         return false;
     };
-
+    function displayPlayer(f) {
+        $('#uploadWrapper').addClass('hidden', 200, 'easeInExpo');
+        $('body').addClass('monokaiBody', 500, "easeInExpo");
+        $('#playerWrapper').removeClass('hidden', 600, "easeInExpo");
+        return false;
+    };
     /* funkcja czytająca txt */
     function readfile(f) {
         if (f) {
             var reader = new FileReader();
             reader.onload = function(e) {
                 var contents = e.target.result;
-
+                var playerOn = displayPlayer(contents);
             }
             reader.readAsText(f);
         } else {
             alert("Nie można załadować pliku. Upwnij się, że jego format jest poprawny.");
         }
-    }
+    };
+
+
 });
