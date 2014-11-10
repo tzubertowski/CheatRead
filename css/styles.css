@@ -1,0 +1,17 @@
+body {
+
+}
+
+.dropDivClass{
+	width: 400px;
+	height: 200px;
+	border: 1px dashed #ccc;
+	color: #ccc;
+	line-height: 200px;
+	text-align: center;
+}
+
+.dropDivClass.dragover{
+	border-color: black;
+	color: black;
+}
