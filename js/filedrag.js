@@ -1,10 +1,26 @@
 $(document).ready(function() {
+    var myFile;
     var fileContent;
     var dDelay;
     var dropdiv = document.getElementById('dropDiv');
     var errorDiv = $('#uploadError');
     var textDiv = $('#textReader');
     var file;
+    $('#dropDiv').click(function(e) {
+        e.preventDefault();
+        $('#hiddenUpload').trigger('click');
+        myFile = $('#hiddenUpload').prop('files');
+    });
+    $('#hiddenUpload').change(function(e) {
+        myFile = document.getElementById('hiddenUpload').files[0];
+        var extension = myFile.name.split('.').pop();
+        if (extension == "txt") {
+            var x = readfile(myFile);
+        } else {
+            errorDiv.switchClass('uploadErrors', 'button-error pure-button', 1000, "easeInOutQuad");
+            errorDiv.html('Cannot load the file. Please check if you are uploading a .txt file.');
+        }
+    });
     dropdiv.ondragover = function() {
         errorDiv.switchClass('button-error pure-button', 'uploadErrors', 1000, "easeInOutQuad");
         this.className = 'dropDivClass dragover';
@@ -57,8 +73,11 @@ $(document).ready(function() {
     function displayTextField(f) {
         $('#playerDiv').removeClass('hidden', 600, "easeInExpo");
         $('#controlGroup').addClass('hidden', 100, "easeInExpo");
-        dDelay = $('#wpm').val();
-        dDelay = 60000/dDelay;
+        if (dDelay = $('#wpm').val()) {
+            dDelay = 60000 / dDelay;
+        } else {
+            dDelay = 60000 / 60;
+        }
         var textSplit = f.split(/[ ,]+/);
         textSplit.push('†');
         jQuery.each(textSplit, function(i) {

@@ -19,6 +19,9 @@ body {
 	float:left;
 
 }
+#hiddenUpload{
+	display: none;
+}
 #wpm{
 	width: 520px;
 }

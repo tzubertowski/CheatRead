@@ -1,7 +1,22 @@
-I'm getting a file via fs.readFile and the output shows these characters:
+Expansions and DLC are normally just more of the same. It’s rare that the developers let loose and make dramatic changes to how the original game played and felt. When they do though, the results can be spectacular.
+Red Dead Redemption: Undead Nightmare
 
-á (and any letter with accent), ¿, etc.
+Red Dead Redemption is an open world action-adventure game set during the final days of the Wild West. John Marston, a former outlaw has to hunt down members of his old gang in exchange for his family’s freedom. Set on both sides of the US-Mexico border, you are free to roam around a gorgeously realised world filled with rich characters and hundreds of things to do. The story is fantastic — it has one of the best game endings ever — and you genuinely feel like you are in a Clint Eastwood film.
 
-As question marks "?".
+Undead Nightmare is different. Rockstar could have added another 10 hours of bounty hunting, horse taming and shootouts, and everyone would have been satisfied. Instead, they added zombies. In Undead Nightmare a plague is sweeping the Old West turning regular people into flesh hungry zombies. John Marston must, once again, save his family, this time by finding the cure to undeath.
+The switch in tone is dramatic; Red Dead Redemption is a serious, dramatic tale of, well, redemption. Undead Nightmare is a great zombie survival game that doesn’t take itself too seriously. They play the same, but they sure feel like two entirely different games.
+Far Cry 3: Blood Dragon
 
-I guess it's an encoding problem, since I'm using UTF8, how can I fix this?
+Far Cry 3 is an open world, first-person shooter set on a tropical island. Jason Brody’s holiday goes wrong after he and his friends get kidnapped by pirates. He escapes and must rescue his friends from the pirates with the help of the suffering locals. Far Cry 3 was one of the best games of 2012.
+Like the previous games in the series, you were free to approach missions any way you please. Sneak quietly in taking out guards with your knife and bow? Check. Use a wingsuit to fly into the centre of the enemy base and kill everyone with a flamethrower? But of course. The plot and characters were equal to the gameplay. The main villain, Vaas, is a particular highlight.
+
+With Far Cry 3 already verging on ridiculous, Ubisoft had to pull out all the stops to come up with an expansion that could top it. With Blood Dragon they succeeded. Rather than being set in the same world, Blood Dragon uses the same engine, gameplay and do-what-you-want mindset but ups the ante. A parody of the so-bad-they’re-good action films of the 1980’s, Blood Dragon features the cyber soldier Sergeant Rex “Power” Colt, a neon colour palate and a ridiculous 80s inspired electro soundtrack.
+In the aftermath of a global nuclear war, Rex has to prevent a rogue agent from making things worse by returning the world to the jurassic period using rockets filled with the blood of the titular blood dragons. It has to be played to be believed. It threads the line between parody and homage perfectly and ends up working out. Far Cry 3 was crazy, Blood Dragon is crazier.
+Borderlands 2: Tiny Tina’s Assault on Dragon Keep
+
+Borderlands 2 is a first person shooter crossed with an RPG. The game is set on the planet Pandora where an ancient Vault is rumoured to contain alien technology. You play as a Vault Hunter, originally on Pandora out of greed, but drawn into a conflict to save the planet from the game’s villain, Handsome Jack. You get to choose from four character classes, each with his or her own playstyle and skill tree.
+The game play is great with a wide variety of weapons to use, great locations and awesome boss fights. The writing and visuals are also fantastic; Borderlands 2 is one of the funniest and prettiest games of the last generation.
+
+In Tiny Tina’s Assault on Dragon Keep you play a game within a game. Tiny Tina, thirteen year-old explosives expert and one of the original’s most entertaining NPCs convinces you and some of the other characters from Borderlands 2 to play a game of Bunkers and Badasses — a riff on Dungeons and Dragons. It all happens inside the fantasy world Tiny Tina, as Bunker Master, creates so things can change at any moment.
+Removing the restrictions from Borderlands 2 gives the developers, Gearbox, license to go nuts. And do they ever. The game takes a fantasy twist with dragons, skeletons, villagers, unicorns and magic powers all present. It’s still obviously a Borderlands game, everything is just ramped up an extra three notches.
+Have I missed another ridiculous expansion? Think I’m wrong with one of my choices? Let me know in the comments.
