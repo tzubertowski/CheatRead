@@ -44,12 +44,14 @@ $(document).ready(function() {
         return false;
     };
 
-    function displayWithDelay(elementToDisplay, dDelay) {
+    function displayWithDelay(leftElem, middleElem, rightElem, dDelay) {
         setTimeout(function() {
-            if (elementToDisplay.indexOf('†') >= 0) {
+            if (rightElem.indexOf('†') >= 0) {
                 menuDisplay = displayUploadMenu();
             }
-            textDiv.html(elementToDisplay);
+            $('#leftText').html(leftElem);
+            $('#middleText').html(middleElem);
+            $('#rightText').html(rightElem);
         }, dDelay);
     };
 
@@ -84,8 +86,16 @@ $(document).ready(function() {
             var el = this;
             var whichLetter = Math.floor(el.length / 2);
             var elementToDisplay = '';
-            elementToDisplay = this.substring(0, whichLetter) + "<span class='middleLetter'>" + this.substring(whichLetter, whichLetter + 1) + '</span>' + this.substring(whichLetter + 1);
-            var displayText = displayWithDelay(elementToDisplay, i * dDelay);
+            var leftElem = " ";
+            var middleElem = " ";
+            var rightElem = " ";
+            if(!this.substring(0, whichLetter)){leftElem = " ";}
+            else {leftElem = this.substring(0, whichLetter);}
+            if(!this.substring(whichLetter, whichLetter+1)){ middleElem = " "; }
+                else{middleElem = "<span class='middleLetter'>" + this.substring(whichLetter, whichLetter + 1) + '</span>';}
+            if(!this.substring(whichLetter + 1)){rightElem = " ";}
+            else { rightElem = this.substring(whichLetter+1);}
+            var displayText = displayWithDelay(leftElem, middleElem, rightElem, i * dDelay);
         });
         return false;
     };
