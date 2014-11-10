@@ -1,17 +1,37 @@
-body {
-
+body {} .dropDivClass {
+    width: 400px;
+    height: 200px;
+    overflow: auto;
+    border: 1px dashed #ccc;
+    color: #ccc;
+    line-height: 200px;
+    text-align: center;
+}
+.dropDivClass.dragover {
+    border-color: black;
+    color: black;
+}
+.uploadErrors {
+    width: 378px;
+    height: 0px;
+    overflow: auto;
+}
+.button-error {
+    width: 378px;
+    overflow: auto;
+    font-size: 12px;
+    color: white;
+    background: rgb(202, 60, 60);
+    /* this is a maroon */
 }
 
-.dropDivClass{
-	width: 400px;
-	height: 200px;
-	border: 1px dashed #ccc;
-	color: #ccc;
-	line-height: 200px;
-	text-align: center;
-}
-
-.dropDivClass.dragover{
-	border-color: black;
-	color: black;
+#uploadWrapper {
+    position: absolute;
+    margin: auto;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 405px;
+    overflow: auto;
 }

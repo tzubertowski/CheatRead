@@ -1,10 +1,9 @@
 $(document).ready(function(){
     var dropdiv = document.getElementById('dropDiv');
+    var errorDiv = $('#uploadError');
     var file;
-        if(typeof jquery != 'undefined'){
-        	alert('mam jquery');
-        }
     dropdiv.ondragover = function() {
+        errorDiv.switchClass('button-error pure-button', 'uploadErrors', 1000, "easeInOutQuad");
         this.className = 'dropDivClass dragover';
         return false;
     };
@@ -16,10 +15,12 @@ $(document).ready(function(){
         e.preventDefault();
         this.className = 'dropDivClass';
         file = e.dataTransfer.files[0];
-        if (file) {
+        var extension = file.name.split('.').pop();
+        if (extension == "txt") {
             var x = readfile(file);
         } else {
-            alert('nope');
+            errorDiv.switchClass('uploadErrors', 'button-error pure-button', 1000, "easeInOutQuad");
+            errorDiv.html('Cannot load the file. Please check if you are uploading a .txt file.');
         }
         return false;
     };
