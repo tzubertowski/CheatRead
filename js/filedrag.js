@@ -38,13 +38,15 @@ $(document).ready(function() {
     };
 
     function displayUploadMenu() {
-        $('#playerWrapper').addClass('hidden', 600, "easeInExpo");
         $('body').removeClass('monokaiBody', 500, 'easeInExpo');
+        $('#playerWrapper').addClass('hidden', 600, "easeInExpo");
+        $('#ribbon').removeClass('hidden');
         $('#uploadWrapper').removeClass('hidden');
     }
 
     function displayPlayer() {
         $('#uploadWrapper').addClass('hidden', 200, 'easeInExpo');
+        $('#ribbon').addClass('hidden', 200, 'easeInExpo');
         $('body').addClass('monokaiBody', 500, "easeInExpo");
         $('#playerWrapper').removeClass('hidden', 600, "easeInExpo");
     };
@@ -54,7 +56,9 @@ $(document).ready(function() {
 
     function displayTextField(f) {
         $('#playerDiv').removeClass('hidden', 600, "easeInExpo");
-        dDelay = $('#wpm').val() * 100;
+        $('#controlGroup').addClass('hidden', 100, "easeInExpo");
+        dDelay = $('#wpm').val();
+        dDelay = 60000/dDelay;
         var textSplit = f.split(/[ ,]+/);
         textSplit.push('†');
         jQuery.each(textSplit, function(i) {

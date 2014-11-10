@@ -10,9 +10,14 @@
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
     </head>
     <body>
+        <div id="ribbon" class="ribbon">
+            <a href="https://github.com/tzubertowski">CheatRead on GitHub</a>
+        </div>
         <div id="uploadWrapper">
             <div class="dropDivClass" id="dropDiv">Drop a .TXT file here</div>
-            <div class="uploadErrors" id="uploadError">smeagle</div>
+
+            <div class="uploadErrors" id="uploadError"></div>
+                        <div class="aboutDiv" id="about"></span>Given file will be parsed and put out as a chain of words with the gravity points of each emboldened and it's color changed to catch user attention. User can fully customize word-flashing speed given in words per minute.</div>
         </div>
         <div id='playerWrapper' class="hidden">
             <div id='playerDiv' class='playerClass hidden'>
@@ -21,14 +26,14 @@
             </div>
             <div id="controlGroup">
                 <form class="pure-form">
-                    <fieldset>
-                        <legend>Settings</legend>
+                    <fieldset class="pure-group">
                         <input type="number" id="wpm" placeholder="Words Per Minute">
                     </fieldset>
-                </form>
+                </fieldset>
+            </form>
             <button id="startDisplayingButton" class="pure-button"><i class="fa fa-play"></i>Start</button>
-            </div>
         </div>
-        <script type="text/javascript" src="js/filedrag.js" charset="utf-8"></script>
-    </body>
+    </div>
+    <script type="text/javascript" src="js/filedrag.js" charset="utf-8"></script>
+</body>
 </html>

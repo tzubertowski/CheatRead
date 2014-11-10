@@ -1,15 +1,45 @@
-body {} .dropDivClass {
+body {
+    background-image: url("../img/bg.png");
+    background-repeat: repeat;
+}
+.aboutDiv {
+    white-space: pre-wrap;
+  
+font-family: regularOpenSans;
+    color: #ccc;
+    font-size: 12px;
+    width: 400px;
+    text-align: justify;
+}
+.openBold {
+    font-family: boldOpenSans;
+    color: #ccc;
+    font-size: 20px;
+    width: 290px;
+    text-align: left;
+}
+.dropDivClass {
     width: 400px;
     height: 200px;
+    margin-bottom: 5px;
     overflow: auto;
     border: 1px dashed #ccc;
     color: #ccc;
     line-height: 200px;
     text-align: center;
+    float: left;
 }
 @font-face {
     font-family: cheatRead;
     src: url('fonts/UbuntuMono-R.ttf');
+}
+@font-face {
+    font-family: regularOpenSans;
+    src: url('fonts/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: boldOpenSans;
+    src: url('fonts/OpenSans-Bold.ttf');
 }
 .dropDivClass.dragover {
     border-color: black;
@@ -36,12 +66,22 @@ body {} .dropDivClass {
     background: white;
     color: black;
 }
+.checkOutMore {
+    background-color: #65d9eb;
+    line-height: 30px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 0;
+}
 #uploadWrapper {
     position: absolute;
+    background-color: white;
+    border: 6px solid white;
     margin: auto;
-    top: 50px;
+    top: 80px;
     right: 0;
-    bottom: 0;
     left: 0;
     width: 405px;
     overflow: auto;
@@ -71,18 +111,60 @@ body {} .dropDivClass {
     font-family: chatRead;
     font-size: xx-large;
 }
-.middleSelector{
-	position: absolute;
-	height: 50px;
-	top:0px;
-	left:300px;
-	width:302px;
-	border-left: 2px dashed #73705d;
+.middleSelector {
+    position: absolute;
+    height: 50px;
+    top: 0px;
+    left: 300px;
+    width: 302px;
+    border-left: 2px dashed #73705d;
 }
-fieldset>legend{
-	    color: #f5276c;
+fieldset>legend {
+    color: #f5276c;
 }
-.middleLetter{
-	color:#65d9eb;
-	font-size: 140%;
+.middleLetter {
+    color: #65d9eb;
+    font-size: 140%;
+}
+button.link {
+    background: none;
+    border: none;
+    color: white;
+}
+/* Ribbon on the left side */
+
+.ribbon {
+    background-color: #a00;
+    overflow: hidden;
+    white-space: nowrap;
+    /* top left corner */
+
+position: absolute;
+    left: -50px;
+    top: 40px;
+    /* 45 deg ccw rotation */
+
+-webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    /* shadow */
+
+-webkit-box-shadow: 0 0 10px #888;
+    -moz-box-shadow: 0 0 10px #888;
+    box-shadow: 0 0 10px #888;
+}
+.ribbon a {
+    border: 1px solid #faa;
+    color: #fff;
+    display: block;
+    font: bold 81.25%'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 1px 0;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    /* shadow */
+
+text-shadow: 0 0 5px #444;
 }
