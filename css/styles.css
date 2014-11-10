@@ -4,12 +4,29 @@ body {
 }
 .aboutDiv {
     white-space: pre-wrap;
-  
-font-family: regularOpenSans;
+    font-family: regularOpenSans;
     color: #ccc;
     font-size: 12px;
     width: 400px;
     text-align: justify;
+}
+#startDisplayingButton{
+	float:right;
+	margin-top: 6px;
+	margin-left: 6px;
+}
+#controlForm{
+	float:left;
+
+}
+#wpm{
+	width: 520px;
+}
+#controlGroup{
+	    top: 80px;
+    right: 0;
+    left: 0;
+	width:263;
 }
 .openBold {
     font-family: boldOpenSans;
